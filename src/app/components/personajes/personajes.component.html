@@ -1,0 +1,43 @@
+<div class="titulos">
+    <h1>PERSONAJES</h1>
+</div>
+
+
+<div class="nav2">
+    <div class="botones2"><a class="textos" [routerLink]="['/personajes']" [routerLinkActive]="['activo']">PERSONAJES</a></div>
+    <div class="botones2"><a class="textos" [routerLink]="['formulario-personajes']" [routerLinkActive]="['activo']">FORMULARIO</a></div>
+</div>
+
+<div class="efecto-carga" *ngIf="!personajes">
+    <a>CARGANDO....</a>
+</div>
+  
+<div class="padre" *ngIf="personajes">
+    <div class="hijo card puntero" *ngFor="let personaje of personajes">
+        
+        <img class="tamaño-imagen imagen" src="assets/img/default.png"  *ngIf="!personaje.imagen_personaje">
+        <!--{{url + 'get-image/' + personaje.imagen_personaje}}-->
+            <div class="card-body">
+                <h4 class="card-title">{{personaje.nombre}} {{personaje.apellido}}</h4>
+                <p class="card-text">{{personaje.descripcion}}</p>
+                <button type="button" class="btn btn-warning"><a class="icon-zoom-in-outline" [routerLink]="['/personajes/ver-personaje', personaje._id]"></a></button>
+                <button type="button" class="btn btn-primary "><a class="icon-pencil" [routerLink]="['/personajes/editar', personaje._id]"></a></button>
+                <button type="button" class="btn btn-danger"><a class="icon-trash"></a></button>
+            </div>
+    </div>
+ 
+<!--
+    <div class="hijo card puntero">
+        <img class="tamaño-imagen imagen" src="../../../assets/img/2.jpg">
+            <div class="card-body">
+                <h4 class="card-title">Kimetsu no yaiba</h4>
+                <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                <button type="button" class="btn btn-warning"><a class="icon-zoom-in-outline"></a></button>
+                <button type="button" class="btn btn-primary"><a class="icon-pencil"></a></button>
+                <button type="button" class="btn btn-danger"><a class="icon-trash"></a></button>
+                <button type="button" class="btn btn-success"><a class="icon-plus"></a></button>
+            </div>
+    </div>
+-->
+
+</div>

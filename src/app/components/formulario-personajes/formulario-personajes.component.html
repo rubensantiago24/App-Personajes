@@ -1,0 +1,69 @@
+<div class="titulos">
+    <h1>{{page_title}}</h1>
+</div>
+ 
+<div class="nav2">
+    <div class="botones2"><a class="textos" [routerLink]="['/personajes']">PERSONAJES</a></div>
+    <div class="botones2"><a class="textos" [routerLink]="['/personajes/formulario-personajes']" [routerLinkActive]="['activo']">FORMULARIO</a></div>
+</div>
+
+<div class="caja">
+<div class="caja2">    
+    <form #personajeForm="ngForm" (ngSubmit)="onSubmit()">
+        <h4 class="centrado">{{titulo_registro}}</h4>
+        <div class="group-material-login">
+            <input class="material-login-control" type="text" name="descripcion" #descripcion="ngModel" [(ngModel)]="personaje.descripcion" required/>
+            <span class="highlight-login"></span>
+            <span class="bar-login"></span>
+            <label><img src="../../../assets/img/descripcion.svg" width="25" height="25">&nbsp;Descripcion.</label>
+
+            <small *ngIf="!descripcion.valid && descripcion.touched">
+                La descripcion no es valida.
+            </small>
+        </div>
+
+        <div class="group-material-login">
+            <input class="material-login-control" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="personaje.nombre" required/>
+            <span class="highlight-login"></span>
+            <span class="bar-login"></span>
+            <label><img src="../../../assets/img/nombre_personaje.svg" width="25" height="25">&nbsp;Nombre del personaje.</label>
+
+            <small *ngIf="!nombre.valid && nombre.touched">
+                El nombre no es valido.
+            </small>
+        </div>    
+
+        <div class="group-material-login">
+            <input class="material-login-control" type="text" name="apellido" #apellido="ngModel" [(ngModel)]="personaje.apellido" required/>
+            <span class="highlight-login"></span>
+            <span class="bar-login"></span>
+            <label><img src="../../../assets/img/nombre_personaje.svg" width="25" height="25">&nbsp;Apellido del personaje.</label>
+
+            <small *ngIf="!apellido.valid && apellido.touched">
+                El Apellido no es valido.
+            </small>
+        </div> 
+
+        <div class="group-material-login">
+            <input class="material-login-control" type="text" name="personalidad" #personalidad="ngModel" [(ngModel)]="personaje.personalidad" required/>
+            <span class="highlight-login"></span>
+            <span class="bar-login"></span>
+            <label><img src="../../../assets/img/personalidad.svg" width="25" height="25">&nbsp;Personalidad del personaje.</label>
+
+            <small *ngIf="!personalidad.valid && personalidad.touched">
+                La personalidad no es valida.
+            </small>
+
+        <div class="group-material-login"> 
+            <input class="material-login-control" type="file" name="imagen_personaje" />
+        </div>
+
+        </div>
+
+        <div class="centrado-botones">
+            <button type="button" class="btn btn-danger">REGRESAR</button>
+            <button type="submit" class="btn btn-success" [disabled]="personajeForm.invalid">ENVIAR</button>
+        </div>        
+    </form>
+</div>
+</div>
