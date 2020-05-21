@@ -46,9 +46,9 @@ update(id, personaje):Observable<any>{
   return this._http.put(this.url+'personajes/personaje/'+id, params, {headers: headers});
 }
 
-delete(id):Observable<any>{
+deletePersonaje(id):Observable<any>{
   let headers = new HttpHeaders().set('Content-type', 'application/json');
-  return this._http.delete(this.url+'personaje/'+id, {headers: headers});
+  return this._http.delete(this.url+'personajes/personaje/'+id, {headers: headers});
 }
 
 

@@ -22,7 +22,7 @@
                 <p class="card-text">{{personaje.descripcion}}</p>
                 <button type="button" class="btn btn-warning"><a class="icon-zoom-in-outline" [routerLink]="['/personajes/ver-personaje', personaje._id]"></a></button>
                 <button type="button" class="btn btn-primary "><a class="icon-pencil" [routerLink]="['/personajes/editar', personaje._id]"></a></button>
-                <button type="button" class="btn btn-danger"><a class="icon-trash"></a></button>
+                <button type="button" class="btn btn-danger"><a class="icon-trash" (click)="delete(personaje._id)"></a></button>
             </div>
     </div>
  
