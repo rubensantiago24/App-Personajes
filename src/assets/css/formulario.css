@@ -59,7 +59,7 @@ input.material-login-control:focus:valid ~ label,
 input.material-login-control:valid ~ label{
   top:-18px;
   font-size:13px;
-  color:#fff;
+  color:#000;
 }
 input.material-login-control:focus:invalid:required,
 input.material-login-control:invalid:required{
@@ -784,4 +784,8 @@ input.material-control:focus ~ .highlight {
 .centrado{
   text-align: center;
   margin-bottom: 30px;
+}
+
+small{
+  color: red;
 }

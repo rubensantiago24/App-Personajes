@@ -12,7 +12,7 @@
     <form #personajeForm="ngForm" (ngSubmit)="onSubmit()">
         <h4 class="centrado">{{titulo_registro}}</h4>
         <div class="group-material-login">
-            <input class="material-login-control" type="text" name="descripcion" #descripcion="ngModel" [(ngModel)]="personaje.descripcion" required/>
+            <input class="material-login-control" autocomplete="off" type="text" name="descripcion" #descripcion="ngModel" [(ngModel)]="personaje.descripcion" required/>
             <span class="highlight-login"></span>
             <span class="bar-login"></span>
             <label><img src="../../../assets/img/descripcion.svg" width="25" height="25">&nbsp;Descripcion.</label>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="group-material-login">
-            <input class="material-login-control" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="personaje.nombre" required/>
+            <input class="material-login-control" autocomplete="off" type="text" name="nombre" #nombre="ngModel" [(ngModel)]="personaje.nombre" required/>
             <span class="highlight-login"></span>
             <span class="bar-login"></span>
             <label><img src="../../../assets/img/nombre_personaje.svg" width="25" height="25">&nbsp;Nombre del personaje.</label>
@@ -34,7 +34,7 @@
         </div>    
 
         <div class="group-material-login">
-            <input class="material-login-control" type="text" name="apellido" #apellido="ngModel" [(ngModel)]="personaje.apellido" required/>
+            <input class="material-login-control" autocomplete="off" type="text" name="apellido" #apellido="ngModel" [(ngModel)]="personaje.apellido" required/>
             <span class="highlight-login"></span>
             <span class="bar-login"></span>
             <label><img src="../../../assets/img/nombre_personaje.svg" width="25" height="25">&nbsp;Apellido del personaje.</label>
@@ -45,7 +45,7 @@
         </div> 
 
         <div class="group-material-login">
-            <input class="material-login-control" type="text" name="personalidad" #personalidad="ngModel" [(ngModel)]="personaje.personalidad" required/>
+            <input class="material-login-control" autocomplete="off" type="text" name="personalidad" #personalidad="ngModel" [(ngModel)]="personaje.personalidad" required/>
             <span class="highlight-login"></span>
             <span class="bar-login"></span>
             <label><img src="../../../assets/img/personalidad.svg" width="25" height="25">&nbsp;Personalidad del personaje.</label>

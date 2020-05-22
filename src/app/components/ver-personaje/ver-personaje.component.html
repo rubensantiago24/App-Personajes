@@ -9,7 +9,8 @@
 <div class="ver-componente" *ngIf="personaje">
     <div class="prueba" >
         <div class="contenedor-imagen">
-            <img class="imagen-ver" src="../../../assets/img/2.jpg">
+            <img class="imagen-ver" src="assets/img/default.png"  *ngIf="!personaje.imagen_personaje">
+           <!--<img class="imagen-ver" src="../../../assets/img/2.jpg">--> 
         </div>
     
         <div class="datos">
